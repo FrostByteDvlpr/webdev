@@ -1,0 +1,73 @@
+<%- include('partials/header') %>
+
+<div class="getting-started-page">
+    
+    <div class="getting-started-page__text-container">
+        <div class="row">
+            <div class="col-md-6 col-sm-12 onboarding-introText">
+                <div class="back-arrow">
+                    <a href="/consultation">
+                      <i class="bi bi-arrow-left-square-fill"></i> <span>Back</span>
+                    </a>
+                  </div>
+                <div class="getting-started-page__header">
+                    <h1>Let's get the easy stuff out of the way first.</h1>
+                    <div class="imgSection">
+                        <img src="/imgs/network.svg" alt="Meeting Image">
+                    </div>
+                    <div class="getting-started-page__header-create-account">
+                        <p>Would you like us to create an account for you?</p>
+                        <div class="form-check form-switch">
+                            <input id="makeProfile" class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                            <label id="makeProfileText" class="form-check-label" for="flexSwitchCheckChecked">Yes, let's create an account.</label>
+                        </div>
+                        <p class="text-muted blurb">This isn't required, but if you decide to move forward thats just one less thing for you to do!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 first-onboarding-form">
+                <div class="getting-started-page__supporting">
+                    <div class="getting-started-form-card">
+                        <form action="">
+                            <div class="input-group firstName">
+                                <label for="firstName" class="get-started-labels">First Name</label>
+                                <input id="firstName" class="getting-started-inputs" type="text">
+                            </div>
+                            <div class="input-group lastName">
+                                <label for="lastName" class="get-started-labels">Last Name</label>
+                                <input id="lastName" class="getting-started-inputs" type="text">
+                            </div>
+                            <div class="input-group email">
+                                <label for="email" class="get-started-labels">Email Address</label>
+                                <input id="email" class="getting-started-inputs" type="email">
+                            </div>
+                            <div class="input-group companyName">
+                                <label for="companyName" class="get-started-labels">Company Name</label>
+                                <input id="companyName" class="getting-started-inputs" type="text">
+                            </div>
+                            <div class="input-group phone">
+                                <label for="phone" class="get-started-labels">Phone Number</label>
+                                <input id="phone" class="getting-started-inputs" type="text">
+                            </div>
+                            <div class="button-group">
+                                <p>Preferred method of contact</p>
+                                <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                                    <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="btncheck1">Call</label>
+                                  
+                                    <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="btncheck2">Text</label>
+                                  
+                                    <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="btncheck3">Email</label>
+                                  </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/scripts/get-started-animations.js"></script>
+<%- include('partials/footer') %>
