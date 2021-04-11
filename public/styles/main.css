@@ -212,6 +212,10 @@ button:focus {
   background-color:rgb(255, 255, 255);
   height: 100vh;
 }
+.get-started-btn-container button {
+  padding: .375rem .75rem;
+  margin-bottom: 25px;
+}
 .getting-started-page__text-container {
   opacity: 0;
 }
@@ -300,13 +304,14 @@ button:focus {
   padding-bottom: 25px;
   margin-left: 45px;
 }
-.getting-started-form-card form {
+.getting-started-form-card form .getStartedFormOne {
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 5px;
   box-shadow: 0 15px 35px rgba(50,50,93,.1),0 5px 15px rgba(0,0,0,.07);
 }
+
 @media screen and (max-width: 770px) {
   .onboarding-introText {
     width: 95%;
