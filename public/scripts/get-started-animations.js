@@ -2,6 +2,7 @@ const makeProfile = document.getElementById("makeProfile");
 const makeProfileText = document.getElementById("makeProfileText");
 const getStartedPage = document.querySelector(".getting-started-page__text-container");
 const backArrow = document.querySelector('.back-arrow a');
+const getStartedFormOne = document.querySelector('.getStartedFormOne');
 
 window.addEventListener('load', () => {
     getStartedPage.classList.add('load-right');
@@ -45,13 +46,25 @@ for (const gsInput of getStartedInputs) {
 }
 
 backArrow.addEventListener('click', (event) => {
-    onPageOut(event, '/consultation')
+    onPageOut(event, getStartedPage,'/consultation')
 })
-function onPageOut(e, redirect) {
+function onPageOut(e, elm, redirect) {
     e.preventDefault();
-    getStartedPage.classList.add('unload-left');
-    getStartedPage.style.opacity = 0;
+    elm.classList.add('unload-left');
+    elm.style.opacity = 0;
     setTimeout(() => {
+      if(redirect) {
         window.location.replace(redirect)
+      }
     }, 300)
 }
+
+const firstContBtn = document.getElementById('contFirst');
+const firstContBtnText = document.querySelector('.getting-started-page__text-container');
+
+firstContBtn.addEventListener('click', (event) => {
+  onPageOut(event, getStartedFormOne);
+  setTimeout(() => {
+    onPageOut(event, firstContBtnText)
+  }, 350);
+});
